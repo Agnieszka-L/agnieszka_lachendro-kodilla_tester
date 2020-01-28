@@ -1,5 +1,3 @@
-import java.net.SocketTimeoutException;
-
 public class Notebook {
 
     int weight;
@@ -22,6 +20,11 @@ public class Notebook {
             System.out.println("This notebook is expensive.");
         }
     }
+
+    public String getWeight() {
+        return String.valueOf(this.weight);
+    }
+  
 
     public void checkWeight() {
         if (this.weight < 800) {
