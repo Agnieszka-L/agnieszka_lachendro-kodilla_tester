@@ -7,17 +7,15 @@ public class User {
         this.age = age;
     }
 
-    public int getAverageAge() {
-        int length = 0;
-        {
-            for (int i = 0; i <= 4; i++) {
-                return length;
-            }
-        }
-        int averageAge = length / 4;
-        return length;
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
+
 
    
 
