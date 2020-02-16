@@ -6,12 +6,12 @@ public class ApplicationPerson {
         Job driver = new Driver();
         Job accountant = new Accountant();
 
-        Person personJonh = new Person("John",20);
-        Person personRick = new Person("Rick",25);
-        Person personKelly = new Person("Kelly",30);
+        Person personJohn = new Person("John", 20, mechanic);
+        Person personRick = new Person("Rick", 25, driver);
+        Person personKelly = new Person("Kelly", 30, accountant);
 
-        personJonh.personsResponsibilities(mechanic);
-        personRick.personsResponsibilities(driver);
-        personKelly.personsResponsibilities(accountant);
+        personJohn.printResponsibilities();
+        personRick.printResponsibilities();
+        personKelly.printResponsibilities();
     }
 }
