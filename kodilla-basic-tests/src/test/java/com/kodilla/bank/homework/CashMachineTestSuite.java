@@ -8,7 +8,8 @@ public class CashMachineTestSuite {
 
     @Test
     public void getBalance() {
-        CashMachine cashMachine = new CashMachine(new int[]{100, -200, 100, 300});
+        int[] transactions = {100, -200, 100, 300};
+        CashMachine cashMachine = new CashMachine(transactions);
         assertEquals(300, cashMachine.getBalance());
     }
 
