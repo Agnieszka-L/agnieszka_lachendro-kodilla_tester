@@ -283,13 +283,13 @@ public class BankTestSuite {
     }
 
     @Test
-    public void getAverageWithdrawalWithOnlyOneTransaction() {
+    public void getAverageWithdrawalWithOnlyOneDepositTransaction() {
         CashMachine[] cashMachines = new CashMachine[]{
                 new CashMachine(new int[]{300}),
                 new CashMachine(new int[]{}),
                 new CashMachine(new int[]{})};
         Bank bank = new Bank(cashMachines);
-        assertEquals(300, bank.getAverageWithdrawal());
+        assertEquals(0, bank.getAverageWithdrawal());
     }
 
     @Test
@@ -350,5 +350,15 @@ public class BankTestSuite {
                 new CashMachine(new int[]{})};
         Bank bank = new Bank(cashMachines);
         assertEquals(100, bank.getAverageDeposits());
+    }
+
+    @Test
+    public void getAverageDepositsWithOnlyOneWithdrawalTransactions() {
+        CashMachine[] cashMachines = new CashMachine[]{
+                new CashMachine(new int[]{-100}),
+                new CashMachine(new int[]{}),
+                new CashMachine(new int[]{})};
+        Bank bank = new Bank(cashMachines);
+        assertEquals(0, bank.getAverageDeposits());
     }
 }
