@@ -21,6 +21,7 @@ public class SchoolDirectory {
         principalToSchoolMap.put(principalWest, highSchool);
 
         Set<Principal> principals = principalToSchoolMap.keySet();
+
         for (Principal principal : principals) {
             School school = principalToSchoolMap.get(principal);
             System.out.println("Principal " + principal.getName() + " has " + school.getSumOfStudentsInSchool() + " students in his " + school.getName());

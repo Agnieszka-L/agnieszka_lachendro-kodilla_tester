@@ -9,8 +9,9 @@ public class School {
 
     public School(String name, int... classStudentCounts) {
         this.name = name;
-        for (int classStudentCount : classStudentCounts)
+        for (int classStudentCount : classStudentCounts) {
             this.classStudentCounts.add(classStudentCount);
+        }
     }
 
     public String getName() {
