@@ -1,24 +1,22 @@
 package com.kodilla.collections.adv.immutable.homework;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookManager {
-    private Map<Book, Book> existingBooks;
+    private List<Book> existingBooks;
 
     public BookManager() {
-        this.existingBooks = new HashMap<>();
+        this.existingBooks = new ArrayList<>();
     }
 
     public Book createBook(String title, String author) {
         Book book = new Book(title, author);
-        if (existingBooks.containsKey(book)) {
-            return existingBooks.get(book);
-        } else {
-            existingBooks.put(book, book);
+        if (existingBooks.contains(book)) {
             return book;
         }
+        existingBooks.add(book);
+        return book;
     }
 }
 
