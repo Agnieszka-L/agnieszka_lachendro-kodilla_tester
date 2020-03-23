@@ -19,7 +19,7 @@ class DictionaryTestSuite {
         //when
         dictionary.addWord(polishWord, englishWord);
         //then
-        assertEquals(1,dictionary.size());
+        assertEquals(1, dictionary.size());
     }
 
     @Test
