@@ -14,9 +14,5 @@ public class TaskManager {
                 .filter(t -> t.getDeadline().isAfter(currentDate))
                 .collect(Collectors.toList());
         System.out.println("notExpiredTasks = " + notExpiredTasks);
-
-
-
-
     }
 }
